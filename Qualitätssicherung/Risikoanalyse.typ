@@ -13,10 +13,10 @@
   margin: (
     x: 1.5cm,
   ),
-  foreground: rotate(-55deg,
-  text(100pt, fill: rgb("#ffcbc441"))[
-    *UNGEPRÜFT*
-  ]),
+//  foreground: rotate(-55deg,
+//  text(100pt, fill: rgb("#ffcbc441"))[
+//    *UNGEPRÜFT*
+//  ]),
   numbering: "1",
   header: 
     grid(
@@ -306,7 +306,7 @@ Lt. Definition entspricht dies kurzzeitigem Unwohlsein oder leichtem Schmerz NRS
 )
 
 Lt. Definition enspricht dies einer reversiblen schwerwiegenden Gesundheitsbeeinträchtigung, irreversiblen geringfügige Gesundheitsbeeinträchtigung oder stärksten Schmerzen NRS 9-10 deren Eintrittswahrschienlichkeit aber mit "noch nie passiert/Eintritt unplausibel" bewertet wurde. 
-Angesichts des Risikos einer Medikamentengabe ohne die Nutzung von Checklisten oder Merkhilfen wird dieses Risiko verhältnismäßig als azeptabel bewertet. Siehe dazu auch den Abschnitt "Bedingt akzeptables Restrisiko"
+Angesichts des Risikos einer Medikamentengabe ohne die Nutzung von Checklisten oder Merkhilfen wird dieses Risiko verhältnismäßig als akzeptabel bewertet. Siehe dazu auch den Abschnitt "Bedingt akzeptables Restrisiko"
 
 #table(
     columns: (1fr, auto, auto, auto),
@@ -318,7 +318,7 @@ Angesichts des Risikos einer Medikamentengabe ohne die Nutzung von Checklisten o
     [#riskrating("A2")], [#riskrating("W2")], [#riskrating(4)],
 )
 
-Lt. Definition enspricht dies vorübergehendem Unwohlsein oder Schmerzen NRS 4-5 mit einer Eintrittswahrschienlichkeit bewertet als "Unwahrscheinlich aber vorstellbar". Auch dies ist angesichts der Umstände im Rettungsdienst als akzeptabel anzunehmen.
+Lt. Definition enspricht dies vorübergehendem Unwohlsein oder Schmerzen NRS 4-5 mit einer Eintrittswahrschienlichkeit bewertet als "Unwahrscheinlich aber vorstellbar". Auch dies ist angesichts der Umstände (Berufung zu einer Notsituation bei der die grundlegende Voraussetzungen zur Anwendung eines Arzneimittels lt. AML gegeben sind) als akzeptabel anzunehmen.
 
 ==== Bedingt akzeptables Restrisiko <bedingt-akzeptabel>
 Eine Sonderstellung nimmt die folgende Bewertung ein: 
@@ -364,8 +364,8 @@ Daher wird die Kombination aus #riskrating("A5") und #riskrating("W1") auch als 
 #pagebreak()
 == Fehler/Problem bei Erstellung <analysis>
 === Flüchtigkeitsfehler <analysis>
-==== Patient*innenschaden aufgrund von Falschangabe durch Tippfehler (Alters-/Gewichtsgrenzen, Indikation, Kontraindikation, Dosisangabe, Wiederholungen, ...) <analysis>
-Unter Ausschluss von gänzlichen Fehlangaben (z.b. falsches Medikament bei einem Algorithmus, Dosierungen die unerwartet mehrere Ampullen erfordern, ...), die ein*e fachkompetente Notfallsanitäter*in erkennen muss sowie der Annahme von sorgfältigem Arbeiten gibt es sehrwohl einige Fehlangaben die schwerwiegende Gewsunheitsbeeinträchtigungen verursachen können (Atemdepression durch Benzodiazepine, starke Kreislaufbeschwerden durch Urapidil, ...) aber diese sollten durch ein*e fachkompetente Notfallsanitäter*in erkenn- und behandelbar sein. Basierend auf dieser Annahme wird das Schadensausmaß als #riskrating("A4") bewertet.
+==== Patient*innenschaden aufgrund von Falschangabe durch Tippfehler oder Copy-Paste (Alters-/Gewichtsgrenzen, Indikation, Kontraindikation, Dosisangabe, Wiederholungen, ...) <analysis>
+Unter Ausschluss von gänzlichen Fehlangaben (z.b. falsches Medikament bei einem Algorithmus, Dosierungen die unerwartet mehrere Ampullen erfordern, ...), die ein*e fachkompetente Notfallsanitäter*in erkennen muss sowie der Annahme von sorgfältigem Arbeiten gibt es sehr wohl einige Fehlangaben die schwerwiegende Gesundheitsbeeinträchtigungen verursachen können (Atemdepression durch Benzodiazepine, starke Kreislaufbeschwerden durch Urapidil, ...) aber diese sollten durch ein*e fachkompetente Notfallsanitäter*in erkenn- und behandelbar sein. Basierend auf dieser Annahme wird das Schadensausmaß als #riskrating("A5") bewertet.
 
 Tippfehler sind ohne weitere Kontrollmaßnahmen, insbesondere bei Zahlen als #riskrating("W5") zu bewerten.
 
@@ -387,7 +387,7 @@ Tippfehler sind ohne weitere Kontrollmaßnahmen, insbesondere bei Zahlen als #ri
     [#riskrating("A4")], [#riskrating("W5")], [#riskrating(20)],
 
     [#underline("Mitigationsmaßnahme") #linebreak()
-    Abgleich des finalen Dokuments mit strukturierten Informationen],
+    Abgleich des finalen Dokuments mit strukturiert aufbereiteten Informationen],
     [#riskrating("A4")], [*↓* #riskrating("W4")], [#riskrating(16)],
 
     [#underline("Mitigationsmaßnahme") #linebreak()
@@ -403,8 +403,9 @@ Tippfehler sind ohne weitere Kontrollmaßnahmen, insbesondere bei Zahlen als #ri
     [#riskrating("A4")], [*↓* #riskrating("W1")], [#riskrating(4)],
 )
 
+#pagebreak()
 ==== Patient*innenschaden aufgrund von fehlender Angabe (Alters-/Gewichtsgrenzen, Indikation, Kontraindikation, Dosisangabe, Wiederholungen, ...) <analysis>
-Die Indikationsangaben der AML des ASBÖ geben einerseits einen Titel für die Anwendung eines algorithmus an, und andererseits eine detailliertere Symptombeschreibung. Fehlen Teile dieser Angaben kann es sowohl zu fälschlicher Anwendung als auch fälschlicher Nichtanwendung kommen.
+Von den aufgeführten Punkten ist das Fehlen einer Kontraindikation sicher der schwerwiegendste. Es ist zwar von einem*er fachkompetente*n Notfallsanitäter*in erwartbar, die wichtigsten Kontraindikationen zu kennen. Dennoch ist davon auszugehen, dass bei vorliegen einer Merkhilfe dieser vertraut wird. Daher wird diese Fehlerquelle mit #riskrating("A5") und #riskrating("W5") bewertet.
 #table(
     columns: (1fr, auto, auto, auto),
     align: (x,y) => if x>0 {left + horizon} else if y==0 {left + horizon} else {left + top},
@@ -412,44 +413,61 @@ Die Indikationsangaben der AML des ASBÖ geben einerseits einen Titel für die A
     gutter: 0pt,
 
     [Initialbewertung],
+    [#riskrating("A5")], [#riskrating("W5")], [#riskrating(25)],
+
+    [#underline("Mitigationsmaßnahme") #linebreak()
+    Trennung von Informationsstrukturierung (Zusammentragen von Informationen aus verschiedenen Quellen mit Quellenverweisen und Übersetzung in CRM taugliche Struktur) und Setzen der Informationen (Formatieren & Layouting der Information für die Anwendung in Stressituationen inkl. tlw. notwendiger Verkürzung von Information)],
+    [#riskrating("A5")], [*↓* #riskrating("W4")], [#riskrating(20)],
+
+    [#underline("Mitigationsmaßnahme") #linebreak()
+    Review von strukturierter Information durch zweite Person],
     [#riskrating("A4")], [#riskrating("W4")], [#riskrating(20)],
 
     [#underline("Mitigationsmaßnahme") #linebreak()
-    TODO],
-    [#riskrating("A5")], [#riskrating("W5")], [#riskrating(25)],
-)
-
-==== Copy Paste Fehler TODOTODO <analysis>
-#table(
-    columns: (1fr, auto, auto, auto),
-    align: (x,y) => if x>0 {left + horizon} else if y==0 {left + horizon} else {left + top},
-    stroke: none,
-    gutter: 0pt,
-
-    [Initialbewertung (TODO)],
-    [#riskrating("A5")], [#riskrating("W5")], [#riskrating(20)],
+    Abgleich des finalen Dokuments mit strukturiert aufbereiteten Informationen],
+    [#riskrating("A4")], [*↓* #riskrating("W3")], [#riskrating(16)],
 
     [#underline("Mitigationsmaßnahme") #linebreak()
-    TODO],
-    [#riskrating("A5")], [#riskrating("W5")], [#riskrating(25)],
+    Review des finalen Dokuments durch zweite Person],
+    [#riskrating("A4")], [*↓* #riskrating("W2")], [#riskrating(12)],
+
+    [#underline("Mitigationsmaßnahme") #linebreak()
+    Strukturiertes Review auf des finalen Dokuments mit einem zweitlichen Abstand von min. 2 Wochen inkl. Vergleich mit mehreren Quellen (Flowchart BV, Tabelle BV, Tabelle Gruppe Linz) durch 3 gleichzeitig anwesende Personen],
+    [#riskrating("A4")], [*↓* #riskrating("W1")], [#riskrating(8)],
 )
 
+#pagebreak()
 === Verständnisfehler <analysis>
-==== Fehlinterpretation der Bundeslehrmeinung <analysis>
+==== Patient*innenschaden aufgrund von Fehlinterpretation der Bundeslehrmeinung <analysis>
+Die Bundeslehrmeinung ist grundsätzlich gut aufbereitet, dennoch kann es bei Details schnell zu Fehlinterpretationen kommen. Die Umsetzung von den Angaben der Bundesschulung erfolgt in bester Absicht, dennoch kann durch einen Fehler ein Patient*innenschaden entstehen. Diese Fehler werden sich aber auf Details, und daher auch in ihrem Schadensausmaß beschränken. Dieses wird daher mit #riskrating("A3") bei einer Eintrittswahrscheinlichkeit von #riskrating("W4") (entspricht Fehlinterpretationen bei 10-30% der Algorithmen) bewertet.
 #table(
     columns: (1fr, auto, auto, auto),
     align: (x,y) => if x>0 {left + horizon} else if y==0 {left + horizon} else {left + top},
     stroke: none,
     gutter: 0pt,
 
-    [Initialbewertung (TODO)],
-    [#riskrating("A5")], [#riskrating("W5")], [#riskrating(20)],
+    [Initialbewertung],
+    [#riskrating("A3")], [#riskrating("W4")], [#riskrating(12)],
 
     [#underline("Mitigationsmaßnahme") #linebreak()
-    TODO],
-    [#riskrating("A5")], [#riskrating("W5")], [#riskrating(25)],
+    Bearbeitung von Algorithmen nur durch Personal welches auch die notwendige Ausbildung für die Anwendung dieser hat],
+    [*↓* #riskrating("A2")], [#riskrating("W4")], [#riskrating(8)],
+
+    [#underline("Mitigationsmaßnahme") #linebreak()
+    Trennung von Informationsstrukturierung (Zusammentragen von Informationen aus verschiedenen Quellen mit Quellenverweisen und Übersetzung in CRM taugliche Struktur) und Setzen der Informationen (Formatieren & Layouting der Information für die Anwendung in Stressituationen inkl. tlw. notwendiger Verkürzung von Information)],
+    [#riskrating("A2")], [#riskrating("W4")], [#riskrating(8)],
+
+    [#underline("Mitigationsmaßnahme") #linebreak()
+    Strukturiertes Review von strukturierter Information inkl. Vergleich mit mehreren Quellen (Flowchart BV, Tabelle BV, Tabelle Gruppe Linz) durch 3 gleichzeitig anwesende Personen (um Interpretationsunterschiede zu identifizieren)],
+    [#riskrating("A2")], [*↓* #riskrating("W3")], [#riskrating(6)],
+
+    [#underline("Mitigationsmaßnahme") #linebreak()
+    Abklärung aller unklaren Inhalte mit der Bundesschulung],
+    [#riskrating("A2")], [*↓* #riskrating("W2")], [#riskrating(4)],
+
 )
 
+#pagebreak()
 ==== Fehlinterpretation von lokalen Protokollen <analysis>
 #table(
     columns: (1fr, auto, auto, auto),
@@ -771,3 +789,23 @@ Die Indikationsangaben der AML des ASBÖ geben einerseits einen Titel für die A
     TODO],
     [#riskrating("A5")], [#riskrating("W5")], [#riskrating(25)],
 )
+
+#pagebreak()
+= Zusammenfassung der Maßnahmen
+=== Strukturierung von Information
+Trennung von Informationsstrukturierung (Zusammentragen von Informationen aus verschiedenen Quellen mit Quellenverweisen und Übersetzung in CRM taugliche Struktur) und Setzen der Informationen (Formatieren & Layouting der Information für die Anwendung in Stressituationen inkl. tlw. notwendiger Verkürzung von Information)
+
+=== 1
+Review von strukturierter Information durch zweite Person
+
+=== 2
+Abgleich des finalen Dokuments mit strukturiert aufbereiteten Informationen
+
+=== 3
+Review des finalen Dokuments durch zweite Person
+
+=== 4 
+Strukturiertes Review auf des finalen Dokuments mit einem zweitlichen Abstand von min. 2 Wochen inkl. Vergleich mit mehreren Quellen (Flowchart BV, Tabelle BV, Tabelle Gruppe Linz) durch 3 gleichzeitig anwesende Personen
+
+=== 5
+Unstrukturiertes Review durch Gruppe aus min. 5 Beta-Tester
